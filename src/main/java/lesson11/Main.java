@@ -1,39 +1,48 @@
 package lesson11;
 
-import java.util.Scanner;
-
 public class Main {
     static void main() {
-        Scanner console = new Scanner(System.in);
 
-        System.out.println("Введи день тижня");
-        String day = console.nextLine().toLowerCase();
+        int day = 2;
+        String name;
+        int number;
+        String month = "X";
 
         switch (day) {
-            case "понеділок":
-                System.out.println("1");
-                break;
-            case "вівторок":
-                System.out.println("2");
-                break;
-            case "середа":
-                System.out.println("3");
-                break;
-            case "четвер":
-                System.out.println("4");
-                break;
-            case "п'ятниця":
-                System.out.println("5");
-                break;
-            case "субота":
-                System.out.println("6");
-                break;
-            case "неділя":
-                System.out.println("7");
-                break;
-            default:
-                System.out.println("Невідомий день тижня");
+            case 1 -> {
+                name = "понеділок";
+                number = 20;
+            }
+            case 2 -> {
+                name = "вівторок";
+                number = 21;
+            }
+            case 3 -> {
+                name = "середа";
+                number = 20;
+            }
+            case 4 ->  {
+                name = "четвер";
+                number = 21;
+            }
+            case 5 -> {
+                name = "пʼятниця";
+                number = 22;
+            }
+            case 6 -> {
+                name = "субота";
+                number = 23;
+            }
+            case 7 -> {
+                name = "неділя";
+                number = 24;
+            }
+            default -> {
+                  name = "невідомий день";
+                  number = 0;
+            }
+        };
 
-        }
+        System.out.println(name + " " + number + "." + month);
     }
 }
