@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Введи кількість елментів які повинні бути в массиві та натисни Enter");
         int arrayLength = scan.nextInt();
 
-        int [] arr = new int[arrayLength];
+        int[] arr = new int[arrayLength];
 
         for (int a = 0; a < arrayLength; a++) {
             System.out.println("Введи елемент № " + (a + 1) + " та натисни Enter");
@@ -28,7 +28,7 @@ public class Main {
 
             choice = scan.nextInt();
 
-            switch(choice) {
+            switch (choice) {
                 case 1:
                     int sum = 0;
                     for (int a = 0; a < arrayLength; a++) {
@@ -48,13 +48,13 @@ public class Main {
 
                 case 3:
                     int maxNum = arr[0];
-                    for (int a =1; a < arrayLength; a++) {
+                    for (int a = 1; a < arrayLength; a++) {
                         if (arr[a] > maxNum) {
                             maxNum = arr[a];
                         }
                     }
-                        System.out.println("Найбільше число: " + maxNum);
-                        break;
+                    System.out.println("Найбільше число: " + maxNum);
+                    break;
 
                 case 4:
                     System.out.println("Програму завершено, будьте здорові");
@@ -64,7 +64,7 @@ public class Main {
                     System.out.println("Ну в меню ж написано тільки 4 пункти, ну ти даєш, давай ще раз");
             }
 
-        } while (choice !=4);
+        } while (choice != 4);
 
     }
 }
