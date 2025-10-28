@@ -9,7 +9,7 @@ public class Dragon {
     private int length;
 
     public Dragon() {
-        System.out.println("Викликаємо Візеріона🐉");
+        System.out.println("Cтворюємо дракона🐉");
     }
 
     public Dragon(String name, int age, double weight, String colour, int length) {
@@ -60,5 +60,23 @@ public class Dragon {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        return  "Ім’я: " + name + "\n" +
+                "Вік: " + age + " років\n" +
+                "Вага: " + weight + "кг\n" +
+                "Колір: " + colour + "\n" +
+                "Довжина: " + length + "м\n";
+
+    }
+
+    public void voice() {
+        System.out.println("Дракарис");
+    }
+
+    public void voice(String word) {
+        System.out.println("Дракарис" + word);
     }
 }

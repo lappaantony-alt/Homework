@@ -8,25 +8,21 @@ public class Main {
     static void main() {
 
         Dragon viserion = new Dragon();
-        viserion.setName("Viserion");
+        viserion.setName("viserion");
         viserion.setAge(7);
         viserion.setWeight(450.45);
         viserion.setColour("Біло-золотий");
         viserion.setLength(25);
 
-        System.out.println("Імʼя дракона: " + viserion.getName());
-        System.out.println("Вік дракона: " + viserion.getAge() + " років");
-        System.out.println("Вага дракона: " + viserion.getWeight() + "кг");
-        System.out.println("Колір дракона: " + viserion.getColour());
-        System.out.println("Довжина дракона: " + viserion.getLength() + "м");
+        System.out.println(viserion);
 
-        Dragon Drogon = new Dragon("Drogon", 7, 475.5, "Чорно-червоний", 35);
+        Dragon drogon = new Dragon("Drogon", 7, 475.5, "Чорно-червоний", 35);
 
-        System.out.println("Імʼя дракона: " + Drogon.getName());
-        System.out.println("Вік дракона: " + Drogon.getAge() + " років");
-        System.out.println("Вага дракона: " + Drogon.getWeight() + "кг");
-        System.out.println("Колір дракона: " + Drogon.getColour());
-        System.out.println("Довжина дракона: " + Drogon.getLength() + "м");
+        System.out.println("Імʼя дракона: " + drogon.getName());
+        System.out.println("Вік дракона: " + drogon.getAge() + " років");
+        System.out.println("Вага дракона: " + drogon.getWeight() + "кг");
+        System.out.println("Колір дракона: " + drogon.getColour());
+        System.out.println("Довжина дракона: " + drogon.getLength() + "м");
 
 
         Scanner scan = new Scanner(System.in);
@@ -38,7 +34,6 @@ public class Main {
         Dragon[] arr = new Dragon[arrayLength];
 
         for (int i = 0; i < arrayLength; i++) {
-            System.out.println("Введи імʼя першого дракона");
             arr[i] = new Dragon();
 
             System.out.println("Введи імʼя дракона №" + (i + 1) + ":");
@@ -68,6 +63,7 @@ public class Main {
             System.out.println("Довжина: " + arr[i].getLength() + " м");
         }
 
+        viserion.voice( "🔥🔥🔥🔥🔥🔥🔥🔥");
     }
 
 
