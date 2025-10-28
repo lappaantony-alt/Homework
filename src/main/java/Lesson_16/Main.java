@@ -31,6 +31,11 @@ public class Main {
         int arrayLength = scan.nextInt();
         scan.nextLine();
 
+        if (arrayLength > 3) {
+            System.out.println("Хоч 575 напиши, але максимум буде3 😛");
+            arrayLength =3;
+        }
+
         Dragon[] arr = new Dragon[arrayLength];
 
         for (int i = 0; i < arrayLength; i++) {
