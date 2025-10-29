@@ -1,5 +1,6 @@
 package Lesson_16;
 
+import Lesson_16.animals.Breed;
 import Lesson_16.animals.Dragon;
 
 import java.util.Scanner;
@@ -13,16 +14,19 @@ public class Main {
         viserion.setWeight(450.45);
         viserion.setColour("Біло-золотий");
         viserion.setLength(25);
+        viserion.setBreed(Breed.DINOSAURTYPE);
 
         System.out.println(viserion);
 
-        Dragon drogon = new Dragon("Drogon", 7, 475.5, "Чорно-червоний", 35);
+        Dragon drogon = new Dragon("Drogon", 7, 475.5, Breed.HORSETYPE, "Чорно-червоний", 35);
 
         System.out.println("Імʼя дракона: " + drogon.getName());
         System.out.println("Вік дракона: " + drogon.getAge() + " років");
         System.out.println("Вага дракона: " + drogon.getWeight() + "кг");
+        System.out.println("Порода дракона: " + drogon.getBreed());
         System.out.println("Колір дракона: " + drogon.getColour());
         System.out.println("Довжина дракона: " + drogon.getLength() + "м");
+
 
 
         Scanner scan = new Scanner(System.in);
@@ -33,7 +37,7 @@ public class Main {
 
         if (arrayLength > 3) {
             System.out.println("Хоч 575 напиши, але максимум буде3 😛");
-            arrayLength =3;
+            arrayLength = 3;
         }
 
         Dragon[] arr = new Dragon[arrayLength];
@@ -68,7 +72,7 @@ public class Main {
             System.out.println("Довжина: " + arr[i].getLength() + " м");
         }
 
-        viserion.voice( "🔥🔥🔥🔥🔥🔥🔥🔥");
+        viserion.voice("🔥🔥🔥🔥🔥🔥🔥🔥");
     }
 
 

@@ -7,12 +7,13 @@ public class Dragon {
     private double weight;
     private String colour;
     private int length;
+    private Breed breed;
 
     public Dragon() {
         System.out.println("Cтворюємо дракона🐉");
     }
 
-    public Dragon(String name, int age, double weight, String colour, int length) {
+    public Dragon(String name, int age, double weight, Breed breed, String colour, int length) {
         System.out.println("Викликаємо Дрогона🐲");
 
         this.name = name;
@@ -20,6 +21,7 @@ public class Dragon {
         this.weight = weight;
         this.colour = colour;
         this.length = length;
+        this.breed = breed;
     }
 
     public String getName() {
@@ -62,13 +64,24 @@ public class Dragon {
         this.length = length;
     }
 
+    public Breed getBreed() {
+        return this.breed;
+    }
+
+    public void setBreed(Breed breed) {
+        this.breed = breed;
+    }
+
     @Override
     public String toString() {
         return  "Ім’я: " + name + "\n" +
                 "Вік: " + age + " років\n" +
                 "Вага: " + weight + "кг\n" +
                 "Колір: " + colour + "\n" +
-                "Довжина: " + length + "м\n";
+                "Довжина: " + length + "м\n" +
+                "Порода: " + breed + "\n";
+
+
 
     }
 
