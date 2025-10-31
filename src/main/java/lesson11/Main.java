@@ -21,7 +21,7 @@ public class Main {
                 name = "середа";
                 number = 20;
             }
-            case 4 ->  {
+            case 4 -> {
                 name = "четвер";
                 number = 21;
             }
@@ -38,10 +38,11 @@ public class Main {
                 number = 24;
             }
             default -> {
-                  name = "невідомий день";
-                  number = 0;
+                name = "невідомий день";
+                number = 0;
             }
-        };
+        }
+        ;
 
         System.out.println(name + " " + number + "." + month);
     }
