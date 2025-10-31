@@ -1,5 +1,7 @@
 package lesson_19;
 
+import java.util.Scanner;
+
 public class Main {
     static void main() {
         // Використовуємо стандартний джава клас Math
@@ -35,8 +37,11 @@ public class Main {
         int rounded = MyMath.round(4.1);
         System.out.println(rounded);
 
-        int n = 4;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введіть номер числа Фібоначчі: ");
+        int n = scan.nextInt();
         int fibonacci = Fibonacci.getFibonacci(n);
         System.out.println("Число Фібоначчі для " + n + " = " + (fibonacci));
+
     }
 }
