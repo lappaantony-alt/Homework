@@ -35,8 +35,8 @@ public class Main {
         int rounded = MyMath.round(4.1);
         System.out.println(rounded);
 
-        int n = 6;
-        int fibonacci = Fibonachi.getFibonacci(n);
+        int n = 4;
+        int fibonacci = Fibonacci.getFibonacci(n);
         System.out.println("Число Фібоначчі для " + n + " = " + (fibonacci));
     }
 }
