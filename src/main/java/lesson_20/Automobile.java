@@ -29,7 +29,6 @@ public class Automobile {
         } else {
             return false;
         }
-
     }
 
     public double howFarCarCanDrive() {
