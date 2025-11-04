@@ -40,7 +40,7 @@ class AutomobileTest {
     void shouldBeAllowedToDrive() {
         //given
         Automobile car = new Automobile();
-        car.setTufDate(YearMonth.of(2025, 11));
+        car.setTufDate(YearMonth.of(2026, 1));
 
         //when
         boolean result = car.carAllowedToDrive();
@@ -53,7 +53,7 @@ class AutomobileTest {
     void shouldShowHowMuchMoreMonthsTillTuf() {
         //given
         Automobile car = new Automobile();
-        car.setTufDate(YearMonth.now().plusMonths(2));
+        car.setTufDate(YearMonth.of(2026, 1));
 
         //when
         int months = car.monthsTillTufExpired();

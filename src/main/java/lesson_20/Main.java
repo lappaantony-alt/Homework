@@ -26,5 +26,6 @@ public class Main {
         System.out.println("Авто може їхати: " + car.carCanDrive());
         System.out.println("TUF дійсний: " + car.carAllowedToDrive());
         System.out.println("Авто може проїхати: " + car.howFarCarCanDrive() + "км");
+        System.out.println("До тюву залишилось: " + car.monthsTillTufExpired() + " місяці");
     }
 }

@@ -23,7 +23,7 @@ public class Automobile {
     }
 
     public boolean carAllowedToDrive() {
-        if (tufDate.isBefore(YearMonth.now()) || tufDate.equals(YearMonth.now())) {
+        if (tufDate.isAfter(YearMonth.now()) || tufDate.equals(YearMonth.now())) {
             return true;
         } else {
             return false;
