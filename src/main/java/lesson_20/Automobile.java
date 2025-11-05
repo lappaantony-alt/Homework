@@ -2,12 +2,11 @@ package lesson_20;
 
 import lombok.*;
 
+import java.time.temporal.*;
 import java.time.YearMonth;
 
 @Data
 @NoArgsConstructor
-@Setter
-@Getter
 
 public class Automobile {
 
@@ -24,7 +23,7 @@ public class Automobile {
     }
 
     public boolean carAllowedToDrive() {
-        if (tufDate.isBefore(YearMonth.now()) || tufDate.equals(YearMonth.now())) {
+        if (tufDate.isAfter(YearMonth.now()) || tufDate.equals(YearMonth.now())) {
             return true;
         } else {
             return false;
@@ -36,6 +35,10 @@ public class Automobile {
             return 0;
         }
         return fuelLvl / fuelConsumption * 100;
+    }
+
+    public int monthsTillTufExpired() {
+        return (int) ChronoUnit.MONTHS.between(YearMonth.now(), tufDate);
     }
 }
 
