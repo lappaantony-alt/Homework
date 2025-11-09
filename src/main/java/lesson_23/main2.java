@@ -1,5 +1,7 @@
 package lesson_23;
 
+import java.util.HashMap;
+
 public class main2 {
     public int romanToInt(String s) {
         HashMap<Character, Integer> romanNumbers = new HashMap<>();
@@ -25,9 +27,9 @@ public class main2 {
 
         }
 
-        return result;
 
         System.out.println("MIX");
+        return result;
     }
 }
 
