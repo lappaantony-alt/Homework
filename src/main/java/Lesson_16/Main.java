@@ -28,7 +28,6 @@ public class Main {
         System.out.println("Довжина дракона: " + drogon.getLength() + "м");
 
 
-
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Введи скільки хочеш створити драконів, але максимум 3");
@@ -73,6 +72,10 @@ public class Main {
         }
 
         viserion.voice("🔥🔥🔥🔥🔥🔥🔥🔥");
+
+        System.out.println(viserion.equals(drogon));
+        System.out.println(viserion.hashCode());
+        System.out.println(drogon.hashCode());
     }
 
 
