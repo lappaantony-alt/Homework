@@ -1,5 +1,7 @@
 package Lesson_16.animals;
 
+import java.util.Objects;
+
 public class Dragon {
 
     private String name;
@@ -74,7 +76,7 @@ public class Dragon {
 
     @Override
     public String toString() {
-        return  "Ім’я: " + name + "\n" +
+        return "Ім’я: " + name + "\n" +
                 "Вік: " + age + " років\n" +
                 "Вага: " + weight + "кг\n" +
                 "Колір: " + colour + "\n" +
@@ -82,7 +84,30 @@ public class Dragon {
                 "Порода: " + breed + "\n";
 
 
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Dragon newDragon = (Dragon) obj;
+
+        return age == newDragon.age
+                && length == newDragon.length
+                && Double.compare(weight, newDragon.weight) == 0
+                && Objects.equals(name, newDragon.name)
+                && Objects.equals(colour, newDragon.colour)
+                && breed == newDragon.breed;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, length, weight, colour, breed);
     }
 
     public void voice() {
