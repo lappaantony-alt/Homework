@@ -10,7 +10,7 @@ class SquareTest {
     @Test
     void testArea() {
         //given
-        Square square = new Square(11);
+        Shape square = new Square(11);
 
         //when
         double area = square.calculateArea();
@@ -22,7 +22,7 @@ class SquareTest {
     @Test
     void testPerimeter() {
         //given
-        Square square = new Square(11);
+        Shape square = new Square(11);
 
         //when
         double perimeter = square.calculatePerimeter();
