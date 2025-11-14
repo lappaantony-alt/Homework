@@ -1,18 +1,10 @@
 package lesson_28;
 
-public class Shape {
+public abstract class Shape {
 
-    public double calculateArea() {
-        System.out.println("The area is not calculated");
-        return 0;
-    }
+    abstract double calculateArea();
 
-    public double calculatePerimeter() {
-        System.out.println("The perimeter is not calculated");
-        return 0;
-    }
+    abstract double calculatePerimeter();
 
-    public void displayInfo() {
-        System.out.println("Abstract shape without parameters");
-    }
+    abstract void displayInfo();
 }

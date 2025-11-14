@@ -10,7 +10,7 @@ class RectangleTest {
     @Test
     void testArea() {
         //given
-        Rectangle rectangle = new Rectangle(23, 14);
+        Shape rectangle = new Rectangle(23, 14);
 
         //when
         double area = rectangle.calculateArea();
@@ -22,7 +22,7 @@ class RectangleTest {
     @Test
     void testPerimeter() {
         //given
-        Rectangle rectangle = new Rectangle(23, 14);
+        Shape rectangle = new Rectangle(23, 14);
 
         //when
         double perimeter = rectangle.calculatePerimeter();
