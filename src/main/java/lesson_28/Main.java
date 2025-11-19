@@ -26,8 +26,7 @@ public class Main {
             System.out.println("Enter the side of Square:");
             double side = scan.nextDouble();
             chosenShape = new Square(side);
-        }
-        else {
+        } else {
             System.out.println("In my world this shape not exist😛");
             return;
         }
