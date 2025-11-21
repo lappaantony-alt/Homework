@@ -31,8 +31,7 @@ public class StackImpl implements Stackable {
     @Override
     public void addElement(int element) {
         if (isFull()) {
-            System.out.println("Easy, cowboy! This stack is already full🤠");
-            return;
+            throw new StackFullException("Easy, cowboy! This stack is already full🤠");
         } else {
             stackArr[++top] = element;
         }
@@ -41,8 +40,7 @@ public class StackImpl implements Stackable {
     @Override
     public Integer takeOutElement() {
         if (isEmpty()) {
-            System.out.println("Did you put anything there to take it out?🤨");
-            return null;
+            throw new StackEmptyException("Did you put anything there to take it out?🤨");
         }
         int element = stackArr[top];
         top--;
@@ -52,8 +50,7 @@ public class StackImpl implements Stackable {
     @Override
     public Integer readTop() {
         if (isEmpty()) {
-            System.out.println("For check top, you have to put there something😉");
-            return null;
+            throw new StackEmptyException("For check top, you have to put there something😉");
         }
         return stackArr[top];
     }

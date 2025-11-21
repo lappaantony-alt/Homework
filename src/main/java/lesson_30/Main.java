@@ -27,35 +27,42 @@ public class Main {
             if (choice == 1) {
                 System.out.println("Write a number");
                 int element = scan.nextInt();
-                stack.addElement(element);
-            }
-            if (choice == 2) {
-                Integer remove = stack.takeOutElement();
-                if (remove != null) {
+                try {
+                    stack.addElement(element);
+                } catch (StackFullException e) {
+                    System.out.println(e.getMessage());
+                }
+            } else if (choice == 2) {
+                try {
+                    Integer remove = stack.takeOutElement();
                     System.out.println("Removed " + remove);
+                } catch (StackEmptyException e) {
+                    System.out.println(e.getMessage());
                 }
-            }
-            if (choice == 3) {
-                Integer topElement = stack.readTop();
-                if (topElement != null) {
+            } else if (choice == 3) {
+                try {
+                    Integer topElement = stack.readTop();
                     System.out.println("Top element: " + topElement);
+                } catch (StackEmptyException e) {
+                    System.out.println(e.getMessage());
                 }
-            }
-            if (choice == 4) {
+            } else if (choice == 4) {
                 boolean result = stack.isEmpty();
                 System.out.println("Stack is empty:" + result);
-            }
-            if (choice == 5) {
+            } else if (choice == 5) {
                 boolean result = stack.isFull();
                 System.out.println("Stack is full:" + result);
-            }
-            if (choice == 6) {
+            } else if (choice == 6) {
                 stack.printStack();
-            }
-            if (choice == 7) {
+            } else if (choice == 7) {
                 stack.clear();
                 System.out.println("Stack cleared");
+            } else {
+                System.out.println("You missed, try one more time");
             }
         }
+
+        scan.close();
+        System.out.println("Bye, have a good day!✌️");
     }
 }
