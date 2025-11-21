@@ -6,11 +6,11 @@ public interface Stackable {
 
     boolean isFull();
 
-    void addElement(int element);
+    void addElement(int element) throws StackFullException;
 
-    Integer takeOutElement();
+    Integer takeOutElement() throws StackEmptyException;
 
-    Integer readTop();
+    Integer readTop() throws StackEmptyException;
 
     void printStack();
 
