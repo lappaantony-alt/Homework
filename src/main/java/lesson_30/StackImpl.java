@@ -1,5 +1,7 @@
 package lesson_30;
 
+import java.util.Optional;
+
 public class StackImpl implements Stackable {
 
     private int maxSize;
@@ -73,5 +75,15 @@ public class StackImpl implements Stackable {
             System.out.println("There is nothing to clean🫠");
         }
         top = -1;
+    }
+
+    @Override
+    public Optional<Integer> takeOutOptional() {
+        if (isEmpty()) {
+            return Optional.empty();
+        }
+        Integer opt = stackArr[top];
+        top--;
+        return Optional.of(opt);
     }
 }
