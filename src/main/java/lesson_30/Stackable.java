@@ -1,5 +1,7 @@
 package lesson_30;
 
+import java.util.Optional;
+
 public interface Stackable {
 
     boolean isEmpty();
@@ -15,4 +17,6 @@ public interface Stackable {
     void printStack();
 
     void clear();
+
+    Optional<Integer> takeOutOptional();
 }
