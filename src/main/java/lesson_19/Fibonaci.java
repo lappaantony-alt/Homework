@@ -24,12 +24,14 @@ public class Fibonaci {
             return 0;
         } else if (n == 1) {
             return 1;
-        }
-
-        for (int number = 2; number <= n; number++) {
-            long next = previous + current;
-            previous = current;
-            current = next;
+        } else if (n == 2) {
+            return 1;
+        } else {
+            for (int number = 2; number <= n; number++) {
+                long next = previous + current;
+                previous = current;
+                current = next;
+            }
         }
         return current;
     }
