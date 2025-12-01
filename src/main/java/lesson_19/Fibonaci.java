@@ -9,7 +9,7 @@ public class Fibonaci {
             return 1;
         }
         if (n == 2) {
-            return 2;
+            return 1;
         } else {
             return getFibonacci(n - 1) + getFibonacci(n - 2);
         }
