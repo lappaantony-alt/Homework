@@ -2,10 +2,10 @@ package lesson_35;
 
 import java.util.*;
 
-public class Word_Utils {
+public class WordUtils {
     public static String getShortestWord(List<String> words) {
 
-        int shortestWordLength = 999999;
+        int shortestWordLength = Integer.MAX_VALUE;
         String shortestWord = "";
 
         for (String word : words) {
