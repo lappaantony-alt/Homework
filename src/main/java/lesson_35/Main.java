@@ -1,12 +1,10 @@
 package lesson_35;
 
-import lesson_35.Word_Utils;
-
 import java.util.*;
 
 public class Main {
     static void main() {
-        Word_Utils wordUtils = new Word_Utils();
+        WordUtils wordUtils = new WordUtils();
 
         List<String> words = new ArrayList<>();
 
@@ -35,7 +33,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Number_Utils numberUtils = new Number_Utils();
+        NumberUtils numberUtils = new NumberUtils();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter how many Fibonacci numbers you want to add");
@@ -52,7 +50,7 @@ public class Main {
         Long sum = numberUtils.getSumFib(numbersList);
         System.out.println("Sum: " + sum);
 
-        List<Integer> multiplied = Number_Utils.multiplyOddNumber(numbersList);
+        List<Integer> multiplied = NumberUtils.multiplyOddNumber(numbersList);
 
         System.out.println("Multiplied odd numbers from list: " + multiplied);
 
