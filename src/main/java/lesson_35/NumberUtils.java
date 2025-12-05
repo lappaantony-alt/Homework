@@ -5,8 +5,8 @@ import lesson_19.Fibonaci;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Number_Utils {
-    public static Long getSumFib(List<Integer> numbers) {
+public class NumberUtils {
+    public static long getSumFib(List<Integer> numbers) {
         long sum = 0;
 
         for (Integer number : numbers) {
