@@ -40,7 +40,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введіть номер числа Фібоначчі: ");
         int n = scan.nextInt();
-        int fibonacci = Fibonaci.getFibonacci(n);
+        long fibonacci = Fibonaci.getFibonacci(n);
         System.out.println("Число Фібоначчі для " + n + " = " + (fibonacci));
 
     }
