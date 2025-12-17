@@ -10,7 +10,7 @@ public class Number_Utils {
         long sum = 0;
 
         for (Integer number : numbers) {
-            int fibonacciValue = Fibonaci.getFibonacci(number);
+            long fibonacciValue = Fibonaci.getFibonacci(number);
             sum += fibonacciValue;
         }
         return sum;
