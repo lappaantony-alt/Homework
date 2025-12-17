@@ -36,15 +36,15 @@ public class Main {
                 .map(Student::getName)
                 .forEach(System.out::println);
 
-        boolean theBest = students.stream()
+        boolean bestStudentExists = students.stream()
                 .anyMatch(student -> student.getGrade() == 5.0);
-        System.out.println("If there at least one student with grade 5.0: " + theBest);
+        System.out.println("If there at least one student with grade 5.0: " + bestStudentExists);
 
         System.out.println("Students with grade more than 4.0:");
-        List<Student> gradeMoreThanFour = students.stream()
+        List<Student> studentsWithGradeAbove4 = students.stream()
                 .filter(student -> student.getGrade() > 4.0)
                 .collect(Collectors.toList());
-        System.out.println(gradeMoreThanFour);
+        System.out.println(studentsWithGradeAbove4);
     }
 }
 

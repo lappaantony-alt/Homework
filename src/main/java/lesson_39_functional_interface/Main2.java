@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.*;
 
 public class Main2 {
-    public static Predicate<Integer> isNumberSimple = number -> {
+    public static Predicate<Integer> isNumberPrime = number -> {
         if (number <= 1) {
             return false;
         }
@@ -37,8 +37,8 @@ public class Main2 {
 
     static void main() {
         randomNumber.accept(13);
-        System.out.println("Number 7 is simple: " + isNumberSimple.test(7));
-        System.out.println("Number 9 is simple: " + isNumberSimple.test(9));
+        System.out.println("Number 7 is prime: " + isNumberPrime.test(7));
+        System.out.println("Number 9 is prime: " + isNumberPrime.test(9));
         System.out.println("Day of the week: " + randomDayOfWeek.get());
         System.out.println("Round double to long&: " + doubleToLong.apply(2.4));
         System.out.println("Fibonacci number from 9: " + fibonacci.apply(11L));
