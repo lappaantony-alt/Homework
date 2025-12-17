@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Set;
 
 public class ListUtils {
-    public static <T> List<T> removeDuplicatesFromList(List<T> numbers) {
+    public static <T> List<T> removeDuplicatesFromList(List<T> elements) {
         List<T> result = new ArrayList<>();
-        Set<T> addedNumbers = new HashSet<>();
+        Set<T> seenElements = new HashSet<>();
 
-        for (T number : numbers) {
-            if (!addedNumbers.contains(number)) {
-                addedNumbers.add(number);
-                result.add(number);
+        for (T element : elements) {
+            if (!seenElements.contains(element)) {
+                seenElements.add(element);
+                result.add(element);
             }
         }
         return result;
