@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Students
+CREATE TABLE IF NOT EXISTS Student
 (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name TEXT,
@@ -16,38 +16,41 @@ VALUES
         ('Nina Voronetskaja', 30, 'Mannheim', 12),
         ('Mykola Digtiar', 28, 'Berlin', 131);
 
-SELECT * FROM Students LIMIT 3;
+SELECT * FROM Student LIMIT 3;
 
-SELECT * FROM Students WHERE age > 31 AND age < 32;
+SELECT * FROM Student WHERE age > 31 AND age < 32;
 
-SELECT * FROM Students WHERE age = 30 OR city = 'Berlin' OR experience_months = '4';
+SELECT * FROM Student WHERE age = 30 OR city = 'Berlin' OR experience_months = 4;
 
-UPDATE Students SET age = 29 WHERE city = 'Coswig';
+UPDATE Student SET age = 29 WHERE city = 'Coswig';
 
-DELETE FROM Students WHERE experience_months = 131;
+DELETE FROM Student WHERE experience_months = 131;
 
-ALTER TABLE Students ADD Grade INT NOT NULL DEFAULT 100;
+ALTER TABLE Student ADD Grade INT NOT NULL DEFAULT 100;
 
-ALTER TABLE Students DROP COLUMN Grade;
+ALTER TABLE Student DROP COLUMN Grade;
 
-ALTER TABLE Students
+ALTER TABLE Student
 Alter COLUMN experience_months TYPE TEXT;
 
-SELECT DISTINCT name, age FROM Students;
+ALTER TABLE Student
+ALTER COLUMN experience_months TYPE INT USING experience_months::INT;
 
-SELECT COUNT(age) FROM Students;
+SELECT DISTINCT name, age FROM Student;
 
-SELECT * FROM Students ORDER BY experience_months;
+SELECT COUNT(age) FROM Student;
 
-SELECT MIN(age) FROM Students;
+SELECT * FROM Student ORDER BY experience_months;
 
-SELECT MAX(experience_months) FROM Students;
+SELECT MIN(age) FROM Student;
 
-SELECT SUM(age) FROM Car WHERE age > 30;
+SELECT MAX(experience_months) FROM Student;
 
-SELECT AVG(experience_months) FROM Students where experience_months > 5;
+SELECT SUM(age) FROM Student WHERE age > 30;
 
-DROP TABLE IF EXISTS Students;
+SELECT AVG(experience_months) FROM Student where experience_months > 5;
+
+DROP TABLE IF EXISTS Student;
 
 
 
