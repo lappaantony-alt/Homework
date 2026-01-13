@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS Student
     experience_months INT
 );
 
-INSERT INTO Students (name, age, city, experience_months)
+INSERT INTO Student (name, age, city, experience_months)
 VALUES
         ('Vadym Dovbnya', 32, 'Frankfurt', 4),
         ('Anton Lappa', 29, 'Coswig', 7),
